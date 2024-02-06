@@ -1,6 +1,6 @@
 Package: PriOmics
 Title: Calculate Mixed Graphical models with or without additional Priors (PriOmics algorithm)
-Version: 1.1
+Version: 1.2
 Authors@R:
     person("Robin", "Kosch", , "kosch.med@mh-hannover.de", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-5127-3912"))

@@ -2,7 +2,7 @@
 % Please edit documentation in R/plot_BIC.R
 \name{plot_BIC}
 \alias{plot_BIC}
-\title{Plot overview of PriOmics models (Lambda against BIC/EBIC)}
+\title{Plot overview of PriOmics models (Lambda against BIC and EBIC)}
 \usage{
 plot_BIC(
   x,
@@ -21,5 +21,5 @@ plot_BIC(
 \item{x}{list of fits calculated with fit_MGM() or fit_MGM_par()}
 }
 \description{
-Plot overview of PriOmics models (Lambda against BIC/EBIC)
+Plot overview of PriOmics models (Lambda against BIC and EBIC)
 }
