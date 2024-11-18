@@ -13,7 +13,7 @@ fit_MGM_par(
   iterations = 100,
   eps = 1e-06,
   prior_X = FALSE,
-  n_cor = 6
+  n_cor = 12
 )
 }
 \arguments{

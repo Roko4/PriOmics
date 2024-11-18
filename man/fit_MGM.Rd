@@ -92,7 +92,7 @@ plot_iheat(adj, save_file = T)
 
 
 ################################################################################
-### fit MGM with prior A (redundant feature groups, i.e. copies)
+### fit MGM with prior A, i.e., CIG - conditionally independent (grouped)
 ################################################################################
 
 # add known structure to model
@@ -115,7 +115,7 @@ plot_heat(adj2)
 plot_heat(adjmat_truth)
 
 ################################################################################
-### fit MGM with prior B (similar feature groups, but no copies)
+### fit MGM with prior B, i.e., non-CIG - non-conditionally independent (grouped)
 ################################################################################
 
 # add known structure to model
