@@ -11,7 +11,13 @@ plot_BIC <- function (x, mar = c(10, 7, 4, 7), cex.bic.text = 0.7, cex.it.text =
 {
   lambda_seq <- x$lambda
   eBIC <- sapply(x$EBIC, function(y) y[[1]])
-  active_par <- sapply(x$EBIC, function(y) y[[3]])
+  get_nonzero_edges <- function(...){
+    adjs <- lapply(1:length(x$lambda), function(y) get_adj_mat(x, y))
+    adjs <- lapply(adjs, function(x) x[upper.tri(x, diag = F)])
+    return(lapply(adjs, function(x) sum(x != 0)))
+  }
+  active_par <- get_nonzero_edges(x)
+
   BIC <- sapply(x$EBIC, function(y) y[[4]])
   col_vec1 <- rep("black", length(lambda_seq))
   col_vec2 <- rep("black", length(lambda_seq))

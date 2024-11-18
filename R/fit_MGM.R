@@ -69,7 +69,7 @@
 #'
 #'
 #' ################################################################################
-#' ### fit MGM with prior A (redundant feature groups, i.e. copies)
+#' ### fit MGM with prior A, i.e., CIG - conditionally independent (grouped)
 #' ################################################################################
 #'
 #' # add known structure to model
@@ -92,7 +92,7 @@
 #' plot_heat(adjmat_truth)
 #'
 #' ################################################################################
-#' ### fit MGM with prior B (similar feature groups, but no copies)
+#' ### fit MGM with prior B, i.e., non-CIG - non-conditionally independent (grouped)
 #' ################################################################################
 #'
 #' # add known structure to model
@@ -123,7 +123,6 @@ fit_MGM <- function(X, Y, groups_X = FALSE, lambda_seq, iterations = 100, eps = 
   # lambda_seq <- lambda_seq_list
   # prior_X <- rep("C", length(Sim$X_groups))
   # grad = "R"
-
 
   pheno_wide_format <- function(Y, Y_levels){
     pheno_wide <- NULL

@@ -13,12 +13,12 @@
 #' @return list of resulting models according to lambda value
 #'
 #' @export
-fit_MGM_par <- function(X, Y, groups_X = FALSE, lambda_seq, iterations = 100, eps = 1e-6, prior_X = FALSE, n_cor = 6){
+fit_MGM_par <- function(X, Y, groups_X = FALSE, lambda_seq, iterations = 100, eps = 1e-6, prior_X = FALSE, n_cor = 12){
 
   # if(missing(prior_X)){
   #   prior_X <- NA
   # }
-  
+
   lambda_seq_list <- lambda_seq
   snowfall::sfInit(parallel = TRUE, cpus = n_cor, type = "SOCK") # set number of cpu cores
   snowfall::sfExportAll()
