@@ -86,7 +86,7 @@ plot_iheat(adj, save_file = T)
 
 
 ################################################################################
-### Method 2: fit PriOmics-MGM with prior A (redundant feature groups, i.e. copies)
+### Method 2: fit PriOmics-MGM with prior A, i.e., CIG - conditionally independent (grouped)
 ################################################################################
 
 # add known structure to model
@@ -109,7 +109,7 @@ plot_heat(adj2)
 plot_heat(adjmat_truth)
 
 ################################################################################
-### Method 3: fit PriOmics-MGM with prior B (similar feature groups, but no copies)
+### Method 3: fit PriOmics-MGM with prior B, i.e., non-CIG - non-conditionally independent (grouped)
 ################################################################################
 
 # add known structure to model
@@ -155,6 +155,7 @@ Altenbuchinger, M., Weihs, A., Quackenbush, J., Grabe, H. J., & Zacharias, H. U.
 Altenbuchinger, M., Zacharias, H. U., Solbrig, S., Schäfer, A., Büyüközkan, M., Schultheiß, U. T., ... & Gronwald, W. (2019). A multi-source data integration approach reveals novel associations between metabolites and renal outcomes in the German Chronic Kidney Disease study. Scientific reports, 9(1), 13954.
 
 ## News/Updates
+- Version 1.3.1 (corrected plot_BIC(); added function for automated group detection get_groups())
 - Version 1.2.2 (added function plot_net_selection() for first order neighborhoods)
 - Version 1.1 Minor bug fixes
 - Version 1.0 Original release
